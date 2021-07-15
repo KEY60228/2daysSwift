@@ -9,9 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hi, Swift!")
-            .font(.largeTitle)
-            .padding()
+        VStack {
+            Text("Hi, Swift!")
+                .font(.largeTitle)
+                .padding()
+            Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Text("切り替えボタン")
+            }
+        }
     }
 }
 
