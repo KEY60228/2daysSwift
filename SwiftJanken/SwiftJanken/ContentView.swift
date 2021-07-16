@@ -26,12 +26,20 @@ struct ContentView: View {
                 Text("グー")
             // チョキ
             } else if answerNumber == 2 {
+                Image("choki")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("チョキ")
             // パー
             } else {
-                
+                Image("pa")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("パー")
             }
             Button(action: {
                 print("タップされたよ！")
+                answerNumber = answerNumber + 1
             }) {
                 Text("じゃんけんをする！")
             }
