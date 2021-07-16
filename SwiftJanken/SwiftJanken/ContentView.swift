@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var answerNumber: Int = 0
+    
     var body: some View {
         VStack {
             // グーの画像を配置
