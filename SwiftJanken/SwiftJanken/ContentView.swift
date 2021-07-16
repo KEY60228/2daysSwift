@@ -12,13 +12,24 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            // グーの画像を配置
-            Image("gu")
-                // リサイズ
-                .resizable()
-                // アスペクト
-                .aspectRatio(contentMode: .fit)
-            Text("グー")
+            // じゃんけんしていない場合
+            if answerNumber == 0 {
+                Text("これからじゃんけんをします。")
+            // グー
+            } else if answerNumber == 1 {
+                // グーの画像を配置
+                Image("gu")
+                    // リサイズ
+                    .resizable()
+                    // アスペクト
+                    .aspectRatio(contentMode: .fit)
+                Text("グー")
+            // チョキ
+            } else if answerNumber == 2 {
+            // パー
+            } else {
+                
+            }
             Button(action: {
                 print("タップされたよ！")
             }) {
