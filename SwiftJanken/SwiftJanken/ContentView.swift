@@ -17,6 +17,11 @@ struct ContentView: View {
                 // アスペクト
                 .aspectRatio(contentMode: .fit)
             Text("グー")
+            Button(action: {
+                print("タップされたよ！")
+            }) {
+                Text("じゃんけんをする！")
+            }
         }
     }
 }
