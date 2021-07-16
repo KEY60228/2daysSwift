@@ -39,7 +39,7 @@ struct ContentView: View {
             }
             Button(action: {
                 print("タップされたよ！")
-                answerNumber = answerNumber + 1
+                answerNumber = Int.random(in: 1...3)
             }) {
                 Text("じゃんけんをする！")
             }
