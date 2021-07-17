@@ -9,4 +9,6 @@ import UIKit
 import AVFoundation
 
 class SoundPlayer: NSObject {
+    let cymbalData = NSDataAsset(name: "cymbalSound")!.data
+    var cymbalPlayer: AVAudioPlayer!
 }
