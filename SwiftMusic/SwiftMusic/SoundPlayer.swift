@@ -11,4 +11,13 @@ import AVFoundation
 class SoundPlayer: NSObject {
     let cymbalData = NSDataAsset(name: "cymbalSound")!.data
     var cymbalPlayer: AVAudioPlayer!
+    
+    func cymbalPlay() {
+        do {
+            cymbalPlayer = try AVAudioPlayer(data: cymbalData)
+            cymbalPlayer.play()
+        } catch {
+            print("シンバルでエラーが発生しました")
+        }
+    }
 }
