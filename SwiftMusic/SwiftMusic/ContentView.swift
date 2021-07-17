@@ -21,7 +21,7 @@ struct ContentView: View {
 
             HStack {
                 Button(action: {
-                    
+                    soundPlayer.cymbalPlay()
                 }) {
                     Image("cymbal")
                         // カラー画像になるよう指定
