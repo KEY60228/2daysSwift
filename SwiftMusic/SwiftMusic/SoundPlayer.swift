@@ -22,4 +22,13 @@ class SoundPlayer: NSObject {
             print("シンバルでエラーが発生しました")
         }
     }
+    
+    func guitarPlay() {
+        do {
+            guitarPlayer = try AVAudioPlayer(data: guitarData)
+            guitarPlayer.play()
+        } catch {
+            print("ギターでエラーが発生しました")
+        }
+    }
 }
