@@ -11,6 +11,7 @@
 		361DC57726A298D6003807B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361DC57626A298D6003807B2 /* ContentView.swift */; };
 		361DC57926A298D7003807B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361DC57826A298D7003807B2 /* Assets.xcassets */; };
 		361DC57C26A298D7003807B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361DC57B26A298D7003807B2 /* Preview Assets.xcassets */; };
+		361DC58526A29DF8003807B2 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361DC58426A29DF8003807B2 /* SoundPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		361DC57826A298D7003807B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		361DC57B26A298D7003807B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		361DC57D26A298D7003807B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		361DC58426A29DF8003807B2 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				361DC57426A298D6003807B2 /* SwiftMusicApp.swift */,
 				361DC57626A298D6003807B2 /* ContentView.swift */,
+				361DC58426A29DF8003807B2 /* SoundPlayer.swift */,
 				361DC57826A298D7003807B2 /* Assets.xcassets */,
 				361DC57D26A298D7003807B2 /* Info.plist */,
 				361DC57A26A298D7003807B2 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				361DC57726A298D6003807B2 /* ContentView.swift in Sources */,
+				361DC58526A29DF8003807B2 /* SoundPlayer.swift in Sources */,
 				361DC57526A298D6003807B2 /* SwiftMusicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
