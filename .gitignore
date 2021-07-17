@@ -42,3 +42,4 @@ DerivedData/
 *.png
 *.jpeg
 *.jpg
+.DS_Store
