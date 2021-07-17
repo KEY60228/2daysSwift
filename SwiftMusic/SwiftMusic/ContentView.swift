@@ -16,6 +16,24 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 // アスペクト比を維持して短編
                 .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+
+            HStack {
+                Button(action: {
+                    
+                }) {
+                    Image("cymbal")
+                        // カラー画像になるよう指定
+                        .renderingMode(.original)
+                }
+                
+                Button(action: {
+
+                }) {
+                    Image("guitar")
+                        // カラー画像になるよう指定
+                        .renderingMode(.original)
+                }
+            }
         }
     }
 }
