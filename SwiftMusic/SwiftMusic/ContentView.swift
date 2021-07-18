@@ -23,9 +23,7 @@ struct ContentView: View {
                 Button(action: {
                     soundPlayer.cymbalPlay()
                 }) {
-                    Image("cymbal")
-                        // カラー画像になるよう指定
-                        .renderingMode(.original)
+                    ButtonImageView(imageName: "cymbal")
                 }
                 
                 Button(action: {
