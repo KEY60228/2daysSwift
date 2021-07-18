@@ -29,9 +29,7 @@ struct ContentView: View {
                 Button(action: {
                     soundPlayer.guitarPlay()
                 }) {
-                    Image("guitar")
-                        // カラー画像になるよう指定
-                        .renderingMode(.original)
+                    ButtonImageView(imageName: "guitar")
                 }
             }
         }
