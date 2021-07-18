@@ -17,6 +17,6 @@ struct ButtonImageView: View {
 
 struct ButtonImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonImageView()
+        ButtonImageView(imageName: "cymbal")
     }
 }
