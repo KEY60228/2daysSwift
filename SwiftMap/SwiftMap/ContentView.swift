@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
     @State var inputText: String = ""
     @State var dispSearchKey: String = ""
+    @State var dispMapType: MKMapType = .standard
     
     var body: some View {
         VStack {
