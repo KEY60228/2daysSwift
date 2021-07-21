@@ -15,12 +15,12 @@ struct MapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         MKMapView()
     }
-    
+
     func updateUIView(_ uiView: MKMapView, context: Context) {
         print(searchKey)
         uiView.mapType = mapType
         let geocoder = CLGeocoder()
-        
+
         // 入力された文字から位置情報を取得
         geocoder.geocodeAddressString(
             searchKey,
@@ -52,6 +52,6 @@ struct MapView: UIViewRepresentable {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(searchKey: "東京タワー")
+        MapView(searchKey: "東京タワー", mapType: .standard)
     }
 }

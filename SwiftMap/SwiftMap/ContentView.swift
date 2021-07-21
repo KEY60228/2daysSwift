@@ -30,9 +30,9 @@ struct ContentView: View {
                         dispMapType = .hybrid
                     } else if dispMapType == .hybrid {
                         dispMapType = .satelliteFlyover
-                    } else if dispMapType = .satelliteFlyover {
+                    } else if dispMapType == .satelliteFlyover {
                         dispMapType = .hybridFlyover
-                    } else if dispMapType = .hybridFlyover {
+                    } else if dispMapType == .hybridFlyover {
                         dispMapType = .mutedStandard
                     } else {
                         dispMapType = .standard
