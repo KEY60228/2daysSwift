@@ -21,7 +21,9 @@ struct ContentView: View {
             })
                 .padding()
 
-            MapView(searchKey: dispSearchKey)
+            ZStack (alignment: .bottomTrailing) {
+                MapView(searchKey: dispSearchKey, mapType: dispMapType)
+            }
         }
     }
 }
