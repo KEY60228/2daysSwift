@@ -18,6 +18,8 @@ struct ContentView: View {
                 print("入力したキーワード: " + dispSearchKey)
             })
                 .padding()
+
+            MapView(searchKey: dispSearchKey)
         }
     }
 }
