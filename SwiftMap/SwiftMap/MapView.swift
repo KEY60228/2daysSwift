@@ -17,6 +17,24 @@ struct MapView: UIViewRepresentable {
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
         print(searchKey)
+        let geocoder = CLGeocoder()
+        
+        // 入力された文字から位置情報を取得
+        geocoder.geocodeAddressString(
+            searchKey,
+            // placemarksに取得した複数の位置情報が格納される
+            // placemarks.locationに位置情報
+            // placemarks.coordinateに緯度経度
+            completionHandler: {(placemarks, error) in
+                // リクエストの結果が存在し、1件目の情報から位置情報を取り出す
+                if let unwrapPlacemarks = placemarks,
+                    let firstPlacemark = unwrapPlacemarks.first,
+                    let location = firstPlacemark.location {
+                        let targetCoordinate = location.coordinate
+                        print(targetCoordinate)
+                    }
+            }
+        )
     }
 }
 
