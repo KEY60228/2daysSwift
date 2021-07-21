@@ -18,6 +18,7 @@ struct MapView: UIViewRepresentable {
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
         print(searchKey)
+        uiView.mapType = mapType
         let geocoder = CLGeocoder()
         
         // 入力された文字から位置情報を取得
