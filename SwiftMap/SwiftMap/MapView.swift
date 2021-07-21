@@ -10,6 +10,7 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     let searchKey: String
+    let mapType: MKMapType
 
     func makeUIView(context: Context) -> MKMapView {
         MKMapView()
