@@ -16,6 +16,10 @@ struct SettingView: View {
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
 
             VStack {
+                Spacer()
+                Text("\(timerValue)秒")
+                    .font(.largeTitle)
+                Spacer()
                 Picker(selection: $timerValue, label: Text("選択")) {
                     Text("10")
                         .tag(10)
@@ -30,6 +34,7 @@ struct SettingView: View {
                     Text("60")
                         .tag(60)
                 }
+                Spacer()
             }
         }
     }
