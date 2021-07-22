@@ -52,6 +52,13 @@ struct ContentView: View {
             )
         }
     }
+    
+    func countDownTimer() {
+        count += 1
+        if timerValue - count <= 0 {
+            timerHandler?.invalidate()
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
