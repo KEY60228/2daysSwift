@@ -11,6 +11,7 @@
 		36A6FB4326A981730077F270 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6FB4226A981730077F270 /* ContentView.swift */; };
 		36A6FB4526A981740077F270 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A6FB4426A981740077F270 /* Assets.xcassets */; };
 		36A6FB4826A981740077F270 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A6FB4726A981740077F270 /* Preview Assets.xcassets */; };
+		36A6FB5126A981A80077F270 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A6FB5026A981A80077F270 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		36A6FB4426A981740077F270 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36A6FB4726A981740077F270 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		36A6FB4926A981740077F270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36A6FB5026A981A80077F270 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				36A6FB4026A981730077F270 /* SwiftTimerApp.swift */,
+				36A6FB5026A981A80077F270 /* SettingView.swift */,
 				36A6FB4226A981730077F270 /* ContentView.swift */,
 				36A6FB4426A981740077F270 /* Assets.xcassets */,
 				36A6FB4926A981740077F270 /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A6FB5126A981A80077F270 /* SettingView.swift in Sources */,
 				36A6FB4326A981730077F270 /* ContentView.swift in Sources */,
 				36A6FB4126A981730077F270 /* SwiftTimerApp.swift in Sources */,
 			);
