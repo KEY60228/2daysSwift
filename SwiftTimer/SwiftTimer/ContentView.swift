@@ -29,6 +29,16 @@ struct ContentView: View {
                                 .background(Color("startColor"))
                                 .clipShape(Circle())
                         }
+                        Button(action: {
+                            
+                        }) {
+                            Text("ストップ")
+                                .font(.title)
+                                .foregroundColor(Color.white)
+                                .frame(width: 140, height: 140)
+                                .background(Color("stopColor"))
+                                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        }
                     }
                 }
             }
