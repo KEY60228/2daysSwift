@@ -18,6 +18,18 @@ struct ContentView: View {
                 VStack(spacing: 30.0) {
                     Text("残り10秒")
                         .font(.largeTitle)
+                    HStack {
+                        Button(action: {
+                            
+                        }) {
+                            Text("スタート")
+                                .font(.title)
+                                .foregroundColor(Color.white)
+                                .frame(width: 140, height: 140)
+                                .background(Color("startColor"))
+                                .clipShape(Circle())
+                        }
+                    }
                 }
             }
             .navigationBarItems(trailing: NavigationLink(destination: SettingView()) {
