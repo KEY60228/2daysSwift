@@ -9,8 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                Text("タイマー画面")
+            }
+            .navigationBarItems(trailing: NavigationLink(destination: SettingView()) {
+                Text("秒数設定")
+            }
+            )
+        }
     }
 }
 
