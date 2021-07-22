@@ -15,6 +15,10 @@ struct ContentView: View {
                     .resizable()
                     .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     .aspectRatio(contentMode: .fill)
+                VStack(spacing: 30.0) {
+                    Text("残り10秒")
+                        .font(.largeTitle)
+                }
             }
             .navigationBarItems(trailing: NavigationLink(destination: SettingView()) {
                 Text("秒数設定")
