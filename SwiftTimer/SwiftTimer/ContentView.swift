@@ -20,7 +20,7 @@ struct ContentView: View {
                     .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     .aspectRatio(contentMode: .fill)
                 VStack(spacing: 30.0) {
-                    Text("残り10秒")
+                    Text("残り\(timerValue - count)秒")
                         .font(.largeTitle)
                     HStack {
                         Button(action: {
