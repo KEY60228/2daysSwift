@@ -34,7 +34,7 @@ struct ContentView: View {
                                 .clipShape(Circle())
                         }
                         Button(action: {
-                            
+                            startTimer()
                         }) {
                             Text("ストップ")
                                 .font(.title)
