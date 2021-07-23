@@ -50,6 +50,9 @@ struct ContentView: View {
                     }
                 }
             }
+            .onAppear {
+                count = 0
+            }
             .navigationBarItems(trailing: NavigationLink(destination: SettingView()) {
                 Text("秒数設定")
             }
