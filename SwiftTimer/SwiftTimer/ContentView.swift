@@ -59,6 +59,22 @@ struct ContentView: View {
             timerHandler?.invalidate()
         }
     }
+    
+    func startTimer() {
+        if let unwrapedTimerHandler = timerHandler {
+            if unwrapedTimerHandler.isValid == true {
+                return
+            }
+        }
+        
+        if timerValue - count <= 0 {
+            count = 0
+        }
+        
+        timerHandler = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            countDownTimer()
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
