@@ -24,7 +24,7 @@ struct ContentView: View {
                         .font(.largeTitle)
                     HStack {
                         Button(action: {
-                            
+                            startTimer()
                         }) {
                             Text("スタート")
                                 .font(.title)
@@ -34,7 +34,11 @@ struct ContentView: View {
                                 .clipShape(Circle())
                         }
                         Button(action: {
-                            startTimer()
+                            if let unwrapedTimerHandler = timerHandler {
+                                if unwrapedTimerHandler.isValid == true {
+                                    unwrapedTimerHandler.invalidate()
+                                }
+                            }
                         }) {
                             Text("ストップ")
                                 .font(.title)
