@@ -11,6 +11,7 @@ struct ContentView: View {
     @State var timerHandler: Timer?
     @State var count = 0
     @AppStorage("timer_value") var timerValue = 10
+    @State var showAlert = false
     
     var body: some View {
         NavigationView {
