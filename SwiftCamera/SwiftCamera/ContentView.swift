@@ -24,6 +24,7 @@ struct ContentView: View {
                 // カメラが利用可能かチェック
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     print("カメラは利用できます")
+                    isShowSheet = true
                 } else {
                     print("カメラは利用できません")
                 }
