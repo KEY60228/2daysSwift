@@ -12,7 +12,12 @@ struct ContentView: View {
         VStack {
             Spacer()
             Button(action: {
-                
+                // カメラが利用可能かチェック
+                if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                    print("カメラは利用できます")
+                } else {
+                    print("カメラは利用できません")
+                }
             }) {
                 Text("カメラを起動する")
                     .frame(maxWidth: .infinity)
