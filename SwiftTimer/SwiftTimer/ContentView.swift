@@ -55,9 +55,12 @@ struct ContentView: View {
                 count = 0
             }
             .navigationBarItems(trailing: NavigationLink(destination: SettingView()) {
-                Text("秒数設定")
-            }
+                    Text("秒数設定")
+                }
             )
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("終了"), message: Text("タイマー終了時間です"), dismissButton: .default(Text("OK")))
+            }
         }
     }
     
