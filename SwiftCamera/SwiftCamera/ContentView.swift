@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var captureImage: UIImage? = nil
+    @State var isShowSheet = false
+    
     var body: some View {
         VStack {
             Spacer()
