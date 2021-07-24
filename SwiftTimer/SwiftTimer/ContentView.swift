@@ -65,6 +65,7 @@ struct ContentView: View {
         count += 1
         if timerValue - count <= 0 {
             timerHandler?.invalidate()
+            showAlert = true
         }
     }
     
