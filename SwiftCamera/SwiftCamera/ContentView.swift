@@ -36,8 +36,11 @@ struct ContentView: View {
             .padding()
             // isPresentedで指定した状態変数がtrueの時に実行される
             .sheet(isPresented: $isShowSheet) {
-                // UIImagePickerControllerのsheetを表示
-                ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                if isPhotoLibrary {
+                    PHPickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                } else {
+                    ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                }
             }
             Button(action: {
                 // 撮影した写真がある時のみUIActivityControllerを表示
