@@ -43,6 +43,23 @@ struct ContentView: View {
                 // UIImagePickerControllerのsheetを表示
                 ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
             }
+            Button(action: {
+                // 撮影した写真がある時のみUIActivityControllerを表示
+                if let _ = captureImage {
+                    isShowActivity = true
+                }
+            }) {
+                Text("SNSに投稿する")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .multilineTextAlignment(.center)
+                    .background(Color.blue)
+                    .foregroundColor(Color.white)
+            }
+            .padding()
+            .sheet(isPresented: $isShowActivity) {
+                ActivityView(shareItems: [captureImage!])
+            }
         }
     }
 }
