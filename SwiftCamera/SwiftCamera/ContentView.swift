@@ -24,13 +24,7 @@ struct ContentView: View {
             }
             Spacer()
             Button(action: {
-                // カメラが利用可能かチェック
-                if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                    print("カメラは利用できます")
-                    isShowSheet = true
-                } else {
-                    print("カメラは利用できません")
-                }
+                isShowAction = true
             }) {
                 Text("カメラを起動する")
                     .frame(maxWidth: .infinity)
