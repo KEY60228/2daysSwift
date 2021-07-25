@@ -19,7 +19,16 @@ struct PHPickerView: UIViewControllerRepresentable {
         }
         
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-            
+            if let result = results.first {
+                result.itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
+                    if let unwrapImage = image as? UIImage {
+                        self.parent.captureImage = unwrapImage
+                    } else {
+                        print("選択された写真は存在しません")
+                    }
+                    self.parent.isShowSheet = false
+                }
+            }
         }
     }
 }
