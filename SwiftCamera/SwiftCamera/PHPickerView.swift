@@ -31,4 +31,27 @@ struct PHPickerView: UIViewControllerRepresentable {
             }
         }
     }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(parent: self)
+    }
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<PHPickerView>) -> PHPickerViewController {
+        // PHPickerViewCongigurationのカスタマイズ
+        var configuration = PHPickerConfiguration()
+        // 静止画を選択
+        configuration.filter = .images
+        // フォトライブラリーで選択できる枚数を1枚にする
+        configuration.selectionLimit = 1
+        // PHPickerViewControllerのインスタンスを生成
+        let picker = PHPickerViewController(configuration: configuration)
+        // delegateの設定
+        picker.delegate = context.coordinator
+        // PHPickerViewControllerを返す
+        return picker
+    }
+    
+    func updateUIViewController(_ uiViewController: PHPickerViewController, context: UIViewControllerRepresentableContext<PHPickerView>) {
+        
+    }
 }
