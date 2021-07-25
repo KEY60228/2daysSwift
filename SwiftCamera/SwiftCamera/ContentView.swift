@@ -36,6 +36,12 @@ struct ContentView: View {
                     .background(Color.blue)
                     .foregroundColor(Color.white)
             }
+            .padding()
+            // isPresentedで指定した状態変数がtrueの時に実行される
+            .sheet(isPresented: $isShowSheet) {
+                // UIImagePickerControllerのsheetを表示
+                ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+            }
         }
     }
 }
