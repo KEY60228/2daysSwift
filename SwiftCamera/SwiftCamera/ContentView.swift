@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State var captureImage: UIImage? = nil
     @State var isShowSheet = false
+    @State var isShowActivity = false
     
     var body: some View {
         VStack {
