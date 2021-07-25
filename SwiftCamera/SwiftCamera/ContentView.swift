@@ -42,6 +42,17 @@ struct ContentView: View {
                     ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
                 }
             }
+            .actionSheet(isPresented: $isShowAction) {
+                ActionSheet(title: Text("確認"), message: Text("選択してください"), buttons: [
+                                .default(Text("カメラ"), action: {
+                                    isPhotoLibrary = false
+                                }),
+                                .default(Text("フォトライブラリー"), action: {
+                                    isPhotoLibrary = true
+                                }),
+                                .cancel()
+                ])
+            }
             Button(action: {
                 // 撮影した写真がある時のみUIActivityControllerを表示
                 if let _ = captureImage {
