@@ -25,6 +25,42 @@ struct EffectView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             }
+            Spacer()
+            Button(action: {
+                
+            }) {
+                Text("エフェクト")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .multilineTextAlignment(.center)
+                    .background(Color.blue)
+                    .foregroundColor(Color.white)
+            }
+            .padding()
+            
+            Button(action: {
+                
+            }) {
+                Text("シェア")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .multilineTextAlignment(.center)
+                    .background(Color.blue)
+                    .foregroundColor(Color.white)
+            }
+            .padding()
+            
+            Button(action: {
+                
+            }) {
+                Text("閉じる")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .multilineTextAlignment(.center)
+                    .background(Color.blue)
+                    .foregroundColor(Color.white)
+            }
+            .padding()
         }
     }
 }
