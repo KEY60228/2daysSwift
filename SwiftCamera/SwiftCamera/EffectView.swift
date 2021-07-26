@@ -18,6 +18,14 @@ struct EffectView: View {
     @State var isShowActivity = false
     
     var body: some View {
+        VStack {
+            Spacer()
+            if let unwrapShowImage = showImage {
+                Image(uiImage: unwrapShowImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+        }
     }
 }
 
