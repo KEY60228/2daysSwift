@@ -70,6 +70,9 @@ struct EffectView: View {
 
 struct EffectView_Previews: PreviewProvider {
     static var previews: some View {
-        EffectView()
+        EffectView(
+            isShowSheet: Binding.constant(true),
+            captureImage: UIImage(named: "preview_use")!
+        )
     }
 }
