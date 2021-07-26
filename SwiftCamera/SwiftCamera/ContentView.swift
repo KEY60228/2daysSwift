@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @State var captureImage: UIImage? = nil
     @State var isShowSheet = false
-    @State var isShowActivity = false
     @State var isPhotoLibrary = false
     @State var isShowAction = false
     
@@ -59,23 +58,6 @@ struct ContentView: View {
                                 }),
                                 .cancel()
                 ])
-            }
-            Button(action: {
-                // 撮影した写真がある時のみUIActivityControllerを表示
-                if let _ = captureImage {
-                    isShowActivity = true
-                }
-            }) {
-                Text("SNSに投稿する")
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 50)
-                    .multilineTextAlignment(.center)
-                    .background(Color.blue)
-                    .foregroundColor(Color.white)
-            }
-            .padding()
-            .sheet(isPresented: $isShowActivity) {
-                ActivityView(shareItems: [captureImage!])
             }
         }
     }
