@@ -62,6 +62,9 @@ struct EffectView: View {
             }
             .padding()
         }
+        .onAppear {
+            showImage = captureImage
+        }
     }
 }
 
