@@ -16,12 +16,6 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Spacer()
-            if let unwrapCaptureImage = captureImage {
-                Image(uiImage: unwrapCaptureImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            }
-            Spacer()
             Button(action: {
                 isShowAction = true
             }) {
