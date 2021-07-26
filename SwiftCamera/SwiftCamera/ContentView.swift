@@ -17,6 +17,7 @@ struct ContentView: View {
         VStack {
             Spacer()
             Button(action: {
+                captureImage = nil
                 isShowAction = true
             }) {
                 Text("カメラを起動する")
@@ -29,10 +30,14 @@ struct ContentView: View {
             .padding()
             // isPresentedで指定した状態変数がtrueの時に実行される
             .sheet(isPresented: $isShowSheet) {
-                if isPhotoLibrary {
-                    PHPickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                if let unwrapCaptureImage = captureImage {
+                    EffectView(isShowSheet: $isShowSheet, captureImage: unwrapCaptureImage)
                 } else {
-                    ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                    if isPhotoLibrary {
+                        PHPickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                    } else {
+                        ImagePickerView(isShowSheet: $isShowSheet, captureImage: $captureImage)
+                    }
                 }
             }
             .actionSheet(isPresented: $isShowAction) {
