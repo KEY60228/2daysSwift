@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+let filterArray = [
+    "CIPhotoEffectMono",
+    "CIPhotoEffectChrome",
+    "CIPhotoEffectFade",
+    "CIPhotoEffectInstant",
+    "CIPhotoEffectNoir",
+    "CIPhotoEffectProcess",
+    "CIPhotoEffectTonal",
+    "CIPhotoEffectTransfer",
+    "CISepiaTone"
+]
+
+var filterSelectNumber = 0
+
 struct EffectView: View {
     // エフェクト編集画面の表示有無
     @Binding var isShowSheet: Bool
