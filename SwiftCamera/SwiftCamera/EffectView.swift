@@ -74,7 +74,7 @@ struct EffectView: View {
                     .foregroundColor(Color.white)
             }
             .sheet(isPresented: $isShowActivity) {
-                ActivityView(shareItems: [showImage!])
+                ActivityView(shareItems: [showImage!.resize()!])
             }
             .padding()
             
