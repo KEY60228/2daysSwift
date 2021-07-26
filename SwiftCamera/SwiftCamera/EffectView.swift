@@ -42,7 +42,13 @@ struct EffectView: View {
             Spacer()
             Button(action: {
                 // フィルタ名を指定
-                let filterName = "CIPhotoEffectMono"
+                let filterName = filterArray[filterSelectNumber]
+                
+                filterSelectNumber += 1
+                if filterSelectNumber == filterArray.count {
+                    filterSelectNumber = 0
+                }
+                
                 // 回転角度を取得
                 let rotate = captureImage.imageOrientation
                 // UIImage形式の画像をCIImage形式に変更
