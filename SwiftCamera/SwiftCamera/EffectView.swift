@@ -79,7 +79,7 @@ struct EffectView: View {
             .padding()
             
             Button(action: {
-                
+                isShowSheet = false
             }) {
                 Text("閉じる")
                     .frame(maxWidth: .infinity)
