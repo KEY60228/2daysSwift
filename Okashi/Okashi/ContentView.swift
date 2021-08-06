@@ -18,6 +18,16 @@ struct ContentView: View {
             TextField("キーワードを入力してください", text: $inputText, onCommit: {
                 okashiDataList.searchOkashi(keyword: inputText)
             })
+            List(okashiDataList.okashiList) { okashi in
+                // okashiに要素を取り出して、Listを生成する
+                // 水平にレイアウト
+                HStack {
+                    // 画像を表示する
+                    Image(uiImage: okashi.image)
+                    // テキストを表示する
+                    Text(okashi.name)
+                }
+            }
         }
     }
 }
