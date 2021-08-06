@@ -8,6 +8,16 @@
 import Foundation
 
 class OkashiData: ObservableObject {
+    // JSONのデータ構造
+    struct ResultJson: Codable {
+        struct Item: Codable {
+            let name: String?
+            let url: URL?
+            let image: URL?
+        }
+        let item: [Item]?
+    }
+
     func searchOkashi(keyword: String) {
         print(keyword)
         
