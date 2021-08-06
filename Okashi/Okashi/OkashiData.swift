@@ -57,7 +57,22 @@ class OkashiData: ObservableObject {
                 let decoder = JSONDecoder()
                 // 受け取ったJSONデータをパースして格納
                 let json = try decoder.decode(ResultJson.self, from: data!)
-                print(json)
+                
+                // お菓子の情報が取得できているか確認
+                if let items = json.item {
+                    // お菓子のリストを初期化
+                    self.okashiList.removeAll()
+                    // 取得しているお菓子の数だけ処理
+                    for item in items {
+                        if let name = item.name, let link = item.url, let imageUrl = item.image, let imageData = try? Data(contentsOf: imageUrl), let image = UIImage(data: imageData)?.withRenderingMode(.alwaysOriginal) {
+                            // 1つのお菓子を構造体でまとめて管理
+                            let okashi  = OkashiItem(name: name, link: link, image: image)
+                            // お菓子の配列へ追加
+                            self.okashiList.append(okashi)
+                        }
+                    }
+                    print(self.okashiList)
+                }
             } catch {
                 print("エラーが出ました")
             }
