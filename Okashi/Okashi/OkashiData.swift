@@ -26,6 +26,9 @@ class OkashiData: ObservableObject {
         }
         let item: [Item]?
     }
+    
+    // お菓子のリスト (Identifiableプロトコル)
+    @Published var okashiList: [OkashiItem] = []
 
     func searchOkashi(keyword: String) {
         print(keyword)
