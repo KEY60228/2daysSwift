@@ -12,6 +12,7 @@
 		360B7AFB26BD69FA005666A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360B7AFA26BD69FA005666A0 /* Assets.xcassets */; };
 		360B7AFE26BD69FA005666A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360B7AFD26BD69FA005666A0 /* Preview Assets.xcassets */; };
 		360B7B0726BD6A53005666A0 /* OkashiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360B7B0626BD6A53005666A0 /* OkashiData.swift */; };
+		360B7B0F26BEBA17005666A0 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360B7B0E26BEBA17005666A0 /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		360B7AFD26BD69FA005666A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		360B7AFF26BD69FA005666A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		360B7B0626BD6A53005666A0 /* OkashiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OkashiData.swift; sourceTree = "<group>"; };
+		360B7B0E26BEBA17005666A0 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				360B7AF626BD69F9005666A0 /* OkashiApp.swift */,
 				360B7AF826BD69F9005666A0 /* ContentView.swift */,
+				360B7B0E26BEBA17005666A0 /* SafariView.swift */,
 				360B7B0626BD6A53005666A0 /* OkashiData.swift */,
 				360B7AFA26BD69FA005666A0 /* Assets.xcassets */,
 				360B7AFF26BD69FA005666A0 /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360B7B0F26BEBA17005666A0 /* SafariView.swift in Sources */,
 				360B7AF926BD69F9005666A0 /* ContentView.swift in Sources */,
 				360B7B0726BD6A53005666A0 /* OkashiData.swift in Sources */,
 				360B7AF726BD69F9005666A0 /* OkashiApp.swift in Sources */,
