@@ -12,6 +12,8 @@ struct ContentView: View {
     @ObservedObject var okashiDataList = OkashiData()
     // 入力された文字列を保持する状態変数
     @State var inputText = ""
+    // SafariViewの表示有無を管理する変数
+    @State var showSafari = false
     
     var body: some View {
         VStack {
@@ -20,17 +22,28 @@ struct ContentView: View {
             })
             .padding()
             List(okashiDataList.okashiList) { okashi in
-                // okashiに要素を取り出して、Listを生成する
-                // 水平にレイアウト
-                HStack {
-                    // 画像を表示する
-                    Image(uiImage: okashi.image)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(height: 40)
-                    // テキストを表示する
-                    Text(okashi.name)
+                // 1つ1つボタンを用意
+                Button(action: {
+                    // SafariViewを表示する
+                    showSafari.toggle()
+                }) {
+                    // okashiに要素を取り出して、Listを生成する
+                    // 水平にレイアウト
+                    HStack {
+                        // 画像を表示する
+                        Image(uiImage: okashi.image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 40)
+                        // テキストを表示する
+                        Text(okashi.name)
+                    }
                 }
+                .sheet(isPresented: self.$showSafari, content: {
+                    // SafariViewを表示する
+                    SafariView(url: okashi.link)
+                        .edgesIgnoringSafeArea(.bottom)
+                })
             }
         }
     }
